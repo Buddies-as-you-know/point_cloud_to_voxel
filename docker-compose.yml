@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  ai_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /home/iplslam/point_cloud_to_voxel:/app
+    tty: true
+    command: python3
