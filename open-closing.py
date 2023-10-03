@@ -3,11 +3,11 @@ import numpy as np
 from scipy.ndimage import binary_opening, binary_closing, generate_binary_structure
 import os
 def process_3d_data(data):
-    selem_opening_small = generate_binary_structure(3, 1)  # 3x3x3
-    selem_closing_large = generate_binary_structure(3, 2)  # 9x9x5
+    selem_opening_small = np.ones((3, 3, 3), dtype=np.uint8)  # 3x3x3
+    selem_closing_large = np.ones((1, 1, 1), dtype=np.uint8)  # 9x9x5
     
     data_opened = binary_opening(data, structure=selem_opening_small)
-    data_closed = binary_closing(data_opened, structure=selem_closing_large)
+    data_closed = binary_closing(data_opened, iterations=10, structure=selem_closing_large)
     data_opened_large = binary_opening(data_closed, structure=selem_closing_large)
     
     return data_opened_large
