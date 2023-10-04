@@ -35,7 +35,6 @@ octree.py
 '''
 open-closing.py
 '''
-
 # x軸をつぶしてyz軸への射影を作成
 '''
 yz.py
