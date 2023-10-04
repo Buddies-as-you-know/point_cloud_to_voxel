@@ -29,7 +29,7 @@ for vertex in vertices_projected:
     xy_bins[xy_bin] = xy_bins.get(xy_bin, 0) + 1  # xy_binsに変更
 
 # ステップ5: 閾値以上のカウントを持つビンを地面として扱う
-threshold = 10  # この閾値は変更可能
+threshold = 5  # この閾値は変更可能
 ground_bins = {k: v for k, v in xy_bins.items() if v >= threshold}  # xy_binsに変更
 
 # 新しい点群を生成
