@@ -2,51 +2,39 @@ import open3d as o3d
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
-from collections import defaultdict
 
-# それぞれの平面に射影されたデータをロード
-xz_pcd = o3d.io.read_point_cloud("output_xz.ply")
-yz_pcd = o3d.io.read_point_cloud("output_yz.ply")
+# 以前のスクリプトからのデータを読み込む
+pcd_xz = o3d.io.read_point_cloud("output_xz.ply")
+pcd_yz = o3d.io.read_point_cloud("output_yz.ply")
 
-# ポイントとカラーをnumpy配列に変換
-xz_points = np.asarray(xz_pcd.points)
-yz_points = np.asarray(yz_pcd.points)
-xz_colors = np.asarray(xz_pcd.colors)
-yz_colors = np.asarray(yz_pcd.colors)
+# 点群をnumpy配列に変換
+points_xz = np.asarray(pcd_xz.points)
+points_yz = np.asarray(pcd_yz.points)
 
-# Z軸の値をキーとするディクショナリを作成し、対応するXおよびY座標のリストを保持
-xz_dict = defaultdict(list)
-yz_dict = defaultdict(list)
+# Z座標でグループ化
+z_coords = set(points_xz[:, 2]) & set(points_yz[:, 2])
 
-for point, color in zip(xz_points, xz_colors):
-    xz_dict[point[2]].append((point[0], color))
+# 各Z座標でループ
+final_points = []
+for z in z_coords:
+    # 各Z平面での点を取得
+    points_in_z_xz = points_xz[points_xz[:, 2] == z]
+    points_in_z_yz = points_yz[points_yz[:, 2] == z]
 
-for point, color in zip(yz_points, yz_colors):
-    yz_dict[point[2]].append((point[1], color))
+    # XとY座標を取得
+    x_coords = set(points_in_z_xz[:, 0])
+    y_coords = set(points_in_z_yz[:, 1])
 
-# 新しい点群とカラーのリストを作成
-new_points = []
-new_colors = []
+    # Cartesian productを計算
+    cartesian_product = [(x, y, z) for x in x_coords for y in y_coords]
+    final_points.extend(cartesian_product)
 
-# Z軸の値ごとにループを回し、XおよびY座標を統合
-for z in set(xz_dict.keys()) & set(yz_dict.keys()):
-    xz_entries = xz_dict[z]
-    yz_entries = yz_dict[z]
+# 最終的な点群をOpen3DのPoint Cloudオブジェクトに変換
+final_pcd = o3d.geometry.PointCloud()
+final_pcd.points = o3d.utility.Vector3dVector(np.array(final_points))
 
-    for xz_entry, yz_entry in zip(xz_entries, yz_entries):
-        x, x_color = xz_entry
-        y, y_color = yz_entry
-        new_points.append([x, y, z])
-        # ここでは平均カラーを使用していますが、他の方法も使用可能です。
-        new_colors.append(((np.array(x_color) + np.array(y_color)) / 2).tolist())
-
-# 新しい点群をOpen3DのPoint Cloudオブジェクトに変換
-new_pcd = o3d.geometry.PointCloud()
-new_pcd.points = o3d.utility.Vector3dVector(np.array(new_points))
-new_pcd.colors = o3d.utility.Vector3dVector(np.array(new_colors))
-
-# 結果を表示（オプション）
-#o3d.visualization.draw_geometries([new_pcd])
+# 結果を表示
+# o3d.visualization.draw_geometries([final_pcd])
 
 # 結果を保存
-o3d.io.write_point_cloud("output_xyz.ply", new_pcd)
+o3d.io.write_point_cloud("output_final.ply", final_pcd)
