@@ -30,6 +30,7 @@ for vertex in vertices_projected:
 
 # ステップ5: 閾値以上のカウントを持つビンを地面として扱う
 threshold = 5  # この閾値は変更可能
+print(xy_bins)
 ground_bins = {k: v for k, v in xy_bins.items() if v >= threshold}  # xy_binsに変更
 
 # 新しい点群を生成
@@ -49,7 +50,7 @@ new_pcd.points = o3d.utility.Vector3dVector(np.array(new_points))
 new_pcd.colors = o3d.utility.Vector3dVector(np.array(new_colors))  # カラーを設定
 
 # 結果を表示
-#o3d.visualization.draw_geometries([new_pcd])
+o3d.visualization.draw_geometries([new_pcd])
 
 # 結果を保存
 o3d.io.write_point_cloud("output_xz.ply", new_pcd)

@@ -17,10 +17,10 @@ def read_ply_file(filepath):
 
     # 'vertex'要素にアクセスし、頂点データを取得
     for vertex in plydata['vertex']:
-        x, z = vertex['x'], vertex['z']  # y座標は無視
-        vertices.append((x, z))
-
+        y, z = vertex['y'], vertex['z']  # y座標は無視
+        vertices.append((y, z))
     return vertices
+
 # XZ座標に基づいて頂点を集計する関数
 def create_histogram(vertices, bin_size):
     """
@@ -28,13 +28,13 @@ def create_histogram(vertices, bin_size):
     """
     histogram = defaultdict(int)
 
-    for x, z in vertices:
+    for y, z in vertices:
         # 座標をbin_sizeに「丸める」
-        binned_x = math.floor(x / bin_size) * bin_size
+        binned_y = math.floor(y / bin_size) * bin_size
         binned_z = math.floor(z / bin_size) * bin_size
 
         # 丸められた座標をキーとして使用し、そのバケットの点の数を増やす
-        histogram[(binned_x, binned_z)] += 1
+        histogram[(binned_y, binned_z)] += 1
 
     return histogram
 
@@ -43,13 +43,12 @@ def create_histogram(vertices, bin_size):
 def write_to_csv(counter, output_csv):
     with open(output_csv, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['X', 'Z', 'Count'])  # CSVのヘッダ行
-        for (x, z), count in counter.items():
-            writer.writerow([x, z, count])  # 各行にX, Z座標と一致する点の数を書き込む
+        writer.writerow(['Y', 'Z', 'Count'])  # CSVのヘッダ行
+        for (y, z), count in counter.items():
+            writer.writerow([y, z, count])  # 各行にX, Z座標と一致する点の数を書き込む
 
 
 # メイン処理
-
 def main(ply_file_path, csv_output_path, bin_size):
     vertices = read_ply_file(ply_file_path)
     histogram = create_histogram(vertices, bin_size)
@@ -59,4 +58,4 @@ def main(ply_file_path, csv_output_path, bin_size):
 # この値を変更することで、ヒストグラムの粒度を調整できます。
 bin_size = 1.0  # 例として1.0を使用
 pwd = os.getcwd()
-print(main(pwd+"/data/_point_cloud.ply","./xz_count.csv",bin_size))
+main(pwd+"/data/_point_cloud.ply",pwd+"/yz_count.csv",bin_size)
