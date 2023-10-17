@@ -1,6 +1,6 @@
 .PHONY: run
 build:
-	docker build -t my-python-app .
+	docker-compose up --build
 run:
-	docker build -t my-python-app .
+	docker-compose up --build
 	docker-compose run my-python-app

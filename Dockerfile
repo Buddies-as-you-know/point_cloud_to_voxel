@@ -14,4 +14,4 @@ RUN python -m venv ./venv && \
     pip install -r requirements.txt
 
 # Run app.py when the container launches
-CMD ["python", "main.py"]
+CMD ["python", "src/main.py"]

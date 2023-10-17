@@ -1,9 +1,11 @@
-version: '3.1'
-
+version: '3'
 services:
-  point-cloud-processing:
-    build: .
-    volumes:
-      - .:/app
-
+  my-python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-python-app
+    container_name: my-python-app-container
+    ports:
+      - "8000:8000"
 
