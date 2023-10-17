@@ -1,5 +1,5 @@
-# Use the official Open3D image as a base image
-FROM python:3.10
+# Use an official Python runtime as a base image
+FROM python:3.8-slim-buster
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -7,9 +7,8 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any additional needed packages specified in requirements.txt
-# Uncomment the line below if you have a requirements.txt file
-# RUN pip install --no-cache-dir -r requirements.txt
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
