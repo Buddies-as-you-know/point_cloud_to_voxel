@@ -2,6 +2,10 @@
 
 https://arxiv.org/abs/2210.04932
 
+# コードを変更したとき
+プルリクを出してください。
+
+https://qiita.com/samurai_runner/items/7442521bce2d6ac9330b
 
 # windows GUI使い方
 コマンドプロンプトを管理者権限で実行
