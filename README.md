@@ -85,7 +85,9 @@ make run
 ```
 
 # 次やること
-- [ ] 穴を埋めるためにhistogram_point_generator.pyを改造
+- [x] 穴を埋めるためにhistogram_point_generator.pyを改造
+- [ ] Nerfの座標系と合わせる
+- [ ]
 
 # 参考文献のcollision設定
 - [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。
