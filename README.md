@@ -34,7 +34,11 @@ https://tech-deliberate-jiro.com/open3-octree/
 ```
 src/octree.py
 ```
+# 床の穴を埋める。
 
+```
+src/histogram_point_generator.py
+```
 # docker実行
 ```
 docker-compose build
@@ -42,6 +46,9 @@ docker-compose up
 ```
 
 # 次やること
+- [ ] 穴を埋めるためにhistogram_point_generator.pyを改造
+
+# 参考文献のcollision設定
 - [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。
 - [ ] シミュレーション内での衝突のためのメッシュ利用: このメッシュをシミュレーション内の衝突処理に利用します。
 - [ ] COLMAPからのカメラポーズ取得: COLMAPからカメラポーズを取得し、それによって衝突メッシュの頂点も任意の参照フレームで表現されます。
