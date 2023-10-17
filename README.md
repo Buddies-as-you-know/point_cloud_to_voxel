@@ -45,8 +45,7 @@ src/histogram_point_generator.py
 ```
 # docker実行
 ```
-docker-compose build
-docker-compose up
+make run
 ```
 
 # 次やること
