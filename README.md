@@ -7,6 +7,10 @@ https://arxiv.org/abs/2210.04932
 
 https://qiita.com/samurai_runner/items/7442521bce2d6ac9330b
 
+# 使用している点群データ
+```
+point_cloud_data/_point_cloud.ply
+```
 # windows GUI使い方
 コマンドプロンプトを管理者権限で実行
 ```
