@@ -9,19 +9,19 @@ https://qiita.com/samurai_runner/items/7442521bce2d6ac9330b
 
 # windows GUI使い方
 コマンドプロンプトを管理者権限で実行
-'''
+```
 ipcofig
-'''
+```
 Wireless LAN adapter Wi-Fi:IPv4 アドレスをの文字を引用して
 
-'''
+```
 export DISPLAY=< Wi-Fi:IPv4 アドレス>:0.0
 echo $DISPLAY
-'''
+```
 
-'''
+```
 xeyes
-'''
+```
 
 確認する
 
@@ -31,15 +31,15 @@ xeyes
 ### octreeとは
 https://tech-deliberate-jiro.com/open3-octree/
 
-'''
+```
 src/octree.py
-'''
+```
 
 # docker実行
-'''
+```
 docker-compose build
 docker-compose up
-'''
+```
 
 # 次やること
 - [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。
