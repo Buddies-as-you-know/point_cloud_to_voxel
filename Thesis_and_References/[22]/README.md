@@ -1,0 +1,1 @@
+[1] S. Casao et al., “A framework for fast prototyping of photo-realistic environments with multiple pedestrians,” 2023 IEEE International Conference on Robotics and Automation (ICRA), 2023. doi:10.1109/icra48891.2023.10160586 

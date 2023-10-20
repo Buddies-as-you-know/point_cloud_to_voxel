@@ -1,0 +1,1 @@
+J. Collins, S. Chand, A. Vanderkop, and D. Howard, “A review of physics simulators for Robotic Applications,” IEEE Access, vol. 9, pp. 51416–51431, 2021. doi:10.1109/access.2021.3068769 

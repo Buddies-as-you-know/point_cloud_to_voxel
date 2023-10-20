@@ -1,0 +1,1 @@
+B. Shen et al., "iGibson 1.0: A Simulation Environment for Interactive Tasks in Large Realistic Scenes," 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Prague, Czech Republic, 2021, pp. 7520-7527, doi: 10.1109/IROS51168.2021.9636667.

@@ -1,0 +1,1 @@
+[1] M. Wang et al., “LQR control and optimization for trajectory tracking of biomimetic robotic fish based on Unreal engine,” Biomimetics, vol. 8, no. 2, p. 236, 2023. doi:10.3390/biomimetics8020236 

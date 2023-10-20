@@ -1,0 +1,1 @@
+Szot, Andrew, et al. "Habitat 2.0: Training home assistants to rearrange their habitat." Advances in Neural Information Processing Systems 34 pp.251-266, 2021.doi:10.48550/arXiv.2106.14405

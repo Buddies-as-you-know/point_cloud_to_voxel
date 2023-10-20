@@ -1,0 +1,1 @@
+[1] P. Martinez-Gonzalez et al., “UnrealROX: An extremely photorealistic virtual reality environment for robotics simulations and synthetic data generation,” Virtual Reality, vol. 24, no. 2, pp. 271–288, 2019. doi:10.1007/s10055-019-00399-5 

@@ -1,0 +1,1 @@
+M. Savva et al., “Habitat: A platform for embodied AI research,” 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 2019. doi:10.1109/iccv.2019.00943 

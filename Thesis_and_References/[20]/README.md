@@ -1,0 +1,1 @@
+[1] A. Khandelwal, L. Weihs, R. Mottaghi, and A. Kembhavi, “Simple but effective: Clip embeddings for embodied ai,” 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. doi:10.1109/cvpr52688.2022.01441 
