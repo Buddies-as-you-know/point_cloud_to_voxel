@@ -88,9 +88,11 @@ make run
 - [x] 穴を埋めるためにhistogram_point_generator.pyを改造
 - [x] docker構築
 - [ ] Nerfの座標系と合わせる
+- [ ] [unreal engine内で gltfのcollisionを設定する](https://forums.unrealengine.com/t/add-collision-and-socket-support-to-gltf-importer/133559)
+- [ ] [unreal engine内で .plyは取り込めないのでgltfに変換](https://forums.unrealengine.com/t/add-collision-and-socket-support-to-gltf-importer/133559)あまりうまく行かない
 
 # 参考文献のcollision設定
-- [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。
+- [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。(Nerfの作り方)
 - [ ] シミュレーション内での衝突のためのメッシュ利用: このメッシュをシミュレーション内の衝突処理に利用します。
 - [ ] COLMAPからのカメラポーズ取得: COLMAPからカメラポーズを取得し、それによって衝突メッシュの頂点も任意の参照フレームで表現されます。
 - [ ] リジッド変換とスケールの推定: この参照フレームとシミュレータのワールドフレームとの間のリジッド変換とスケールを推定します。このために、最小二乗最適化を解決し、メッシュ内の支配的な床面の法線ベクトルがシミュレータのz軸と整列するように制約を設定します。
