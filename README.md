@@ -89,7 +89,7 @@ make run
 - [x] docker構築
 - [ ] Nerfの座標系と合わせる
 - [ ] [unreal engine内で gltfのcollisionを設定する](https://forums.unrealengine.com/t/add-collision-and-socket-support-to-gltf-importer/133559)
-- [ ] [unreal engine内で .plyは取り込めないのでgltfに変換](https://forums.unrealengine.com/t/add-collision-and-socket-support-to-gltf-importer/133559)あまりうまく行かない
+- [x] [unreal engine内で .plyは取り込めないのでgltfに変換](https://forums.unrealengine.com/t/add-collision-and-socket-support-to-gltf-importer/133559)あまりうまく行かない
 
 # 参考文献のcollision設定
 - [ ] 占有率のボクセル化: 予測された占有率をボクセル化し、それを利用してマーチングキューブアルゴリズムを使用してメッシュを計算します。(Nerfの作り方)
