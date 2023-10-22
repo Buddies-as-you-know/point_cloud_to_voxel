@@ -11,7 +11,7 @@ WORKDIR /app
 
 # Copy just the requirements file and install dependencies
 # This layer is rebuilt when requirements.txt changes
-COPY requirements.txt ./
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
