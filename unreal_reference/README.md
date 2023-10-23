@@ -2,20 +2,22 @@
 
 https://docs.unrealengine.com/5.1/ja/lidar-point-cloud-plugin-quick-start-guide-in-unreal-engine/
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b50220d6-48fe-49c1-a5c7-ed9d28f8cec0/d6d842b7-ff58-453d-a448-9cbab1badc79/Untitled.png)
+![Screenshot from 2023-10-23 14-26-59](https://github.com/Buddies-as-you-know/point_cloud_to_voxel/assets/69001166/fbae58eb-5fe4-4f03-b030-e072605e5aa3)
+
 
 上記の拡張子で点群をunreal engineにいれる。
 
 そこから
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b50220d6-48fe-49c1-a5c7-ed9d28f8cec0/df516ac8-4fbc-4825-bc6a-a38dd97e01d1/Untitled.png)
+![Screenshot from 2023-10-23 14-39-11](https://github.com/Buddies-as-you-know/point_cloud_to_voxel/assets/69001166/101d6b17-f118-439a-9753-9b3f9375d006)
+
 
 選択モードから
+![image](https://github.com/Buddies-as-you-know/point_cloud_to_voxel/assets/69001166/05d339f5-87ce-4e68-88e6-71311aa6316d)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b50220d6-48fe-49c1-a5c7-ed9d28f8cec0/73c410fc-b57e-4919-8bdf-0e47a987aaa2/Untitled.png)
 
 **[Add Collision]** を選択します。
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b50220d6-48fe-49c1-a5c7-ed9d28f8cec0/1ed2ca0a-dbab-4eea-b2f5-e7c1a46f655d/Untitled.png)
+![image](https://github.com/Buddies-as-you-know/point_cloud_to_voxel/assets/69001166/78637327-94ba-4ecf-b4e1-d86778e6283a)
 
 これで点群のコリジョンの設定ができる。
