@@ -42,19 +42,74 @@ April 2021
 AI 研究用のビジョンベースのアルゴリズムを開発するための 3D フォトリアリスティックな環境シミュレーターである PreSimを提案、開発をしている。
 
 ## 先行研究と比べてどこがすごい?
+- gazebo
+- unreal engine 4
+- VRKitchen
+- Habitat
+エンジンへの依存度が高いため、豊富なシミュレート環境によって制限されます。対照的に、当社の環境シミュレーターを使用すると、ユーザーはデータセットを使用して独自の環境を構築できます。
 
 ![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/3ee06526-438f-4f17-9207-561edf19cb07)
 
 従来の手法に比べて、拡張現実を利用することで、ロボットは環境の変化に柔軟に適応し、より正確な把持が可能になります。
 
+Gibson Envはこの論文と近いことをしている。
+
+### Image based rendering
+
+
 ## 技術や手法のキモはどこ?
 
-拡張現実を使用して、人間のデモンストレーションをロボットに転送し、物体の位置と姿勢を正確に把握することです。
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/0a11dddb-15be-4ea8-983e-d980c2f5694c)
+
+1. 3D 再構成から生成された実際のシーンの点群を ROS にインポートし、
+2. ROS フレームワークの 3D ビジュアライザーである Rviz で入力画像のカメラポーズとともに表示します。
+3. 仮想世界全体で仮想カメラの動きを制御し、ROS によってその 6D 姿勢をリアルタイムで推定します。
+4. 推定された姿勢は、クエリ入力データセット内で最も類似した色と深度の画像ペアを選択するための基準として使用されます。次に、選択した色と深度の画像ペアを使用して、ビュー合成モジュールに基づいて仮想ビューを合成します。
+5. 同時に、移動するカメラの軌跡全体と合成された色と深度の画像のペアが記録されます。
+
+### ビュー合成
+
+ビュー合成モジュールは RGB-D 画像のまばらなセットを入力として受け取り、任意の視点から新しい色と深度の画像ペアを生成します。
+#### オブジェクトの境界のピクセル精度の整列と深度の精緻化
+色画像と深度画像のペア間でのオブジェクトの境界のピクセル精度の整列と正確な深度値は、高品質なレンダリングのために必要です。不正確な深度値や整列のズレは、ゴーストの輪郭などの視覚的なアーチファクトを引き起こすことがよくあります。オフラインの前処理中に、この目的を達成するためのピクセル対ピクセルの多視点深度精緻化アルゴリズムを導入します。
+
+マッチングコスト関数 C(d i) は次のように定義されます。
+
+```math
+C(d_i) = C_{pixel}(d_i) + C_{patch}(d_i)
+```
+
+ここで、\( C_{\text{pixel}}(d_i) \) と \( C_{\text{patch}}(d_i) \) は、それぞれピクセル \( i \) の深度 \( d_i \) に対する写真の一貫性とエッジの保存を強調します。
+
+写真の一貫性 \( C_{\text{pixel}}(d_i) \) は、それを他の画像に投影することで計測されます。以下の式で示されます。
+```math
+C_{\text{pixel}}(d_i) = \sum _{r\in R}\lambda ||x_{i} - x_{r} ||_1 + (1-\lambda) ||\bigtriangledown x_{i} - \bigtriangledown x_{r}||_1
+C_{patch}(d_i) =\textstyle \frac{1}{N} \sum _{q\in W_i } e^{ -||x_{i} -x_{q}||_1}
+
+```
+深度の精緻化過程では、一致コストが最も低い近くのものとピクセルの深度値を繰り返し置き換えます。イテレーションは左上のピクセルから始まり、行の主要な順序でピクセルを横断します。伝播は深度のフィルタリングと交互に行われます。
+
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/6c61a2f9-1853-4d2d-bf67-a5e13624ee99)
+
 
 ## どうやって有効だと検証した?
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/01753ec8-0c29-4e55-aaab-1491da9a0095)
 
-著者たちは、様々な物体を把持するタスクを通じて、提案手法の有効性を実験的に検証しました。
 
+- 3 つの独自のデータセット
+- [datasets (Attic, Dorm, Playroom, Reading corner)](https://dl.acm.org/doi/pdf/10.1145/2980179.2982420)
+
+さまざまなデータセットでレンダリングされた深度マップの定量的評価
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/8bbb2560-2af4-45f7-9c45-dd00ddc73c7d)
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/91217a1f-752f-4fbe-93c5-e01e7275f3e7)
+![image](https://github.com/Buddies-as-you-know/research_docs/assets/69001166/b45bd553-e3d9-41b9-b6e0-d4036ab8e92c)
+
+
+
+部屋全体をカバーすることを目的として、まばらにキャプチャされた画像が収集されます。ピーク信号対雑音比 (PSNR) (高いほど優れています) は、画質を評価するために使用されます。定量的評価結果を表 3にまとめます。
+## 次に読むべき論文はあるか？
+- [Scalable Inside-Out Image-Based Rendering](https://dl.acm.org/doi/pdf/10.1145/2980179.2982420)
+- [F. Xia, A. R. Zamir, Z. He, A. Sax, J. Malik and S. Savarese, "Gibson env: Real-world perception for embodied agents", Proc. IEEE Conf. Comput. Vis. Pattern Recognit., pp. 9068-9079, 2018.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8579043)
 ## 論文の主張やビジョンそのものに問題はないか？
 - 自分の論文にも近い論文
 
