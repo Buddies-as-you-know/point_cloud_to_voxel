@@ -1,35 +1,13 @@
 [4] D. Fernandez-Chaves, J.-R. Ruiz-Sarmiento, A. Jaenal, N. Petkov, and J. Gonzalez-Jimenez, “Robot@VirtualHome, an ecosystem of virtual environments and tools for realistic indoor robotic simulation,” Expert Systems with Applications, vol. 208, p. 117970, 2022. doi:10.1016/j.eswa.2022.117970 
 
-
-概要：
-この研究では、Robot@VirtualHomeという新しいエコシステムが紹介されています。これは、リアルな室内ロボットシミュレーションのための仮想環境とツールのエコシステムです。このシステムは、実世界の条件に一般化できるアルゴリズムを開発するためのリッチな仮想環境の利用を通じて、サービスロボティクス関連の問題の研究を強化します。
-
-研究背景：
-サービスロボティクスの研究は、伝統的にデータセットに依存してきましたが、これらのデータセットは特定の瞬間にキャプチャされた世界のバージョンに過ぎません。この制約を克服するために、リアルなシミュレーションを可能にする仮想環境が提案されています。
-
-提案手法：
-Robot@VirtualHomeは、リアルな仮想環境の管理を可能にするツールのエコシステムを提供します。これには、照明条件、テクスチャ、オブジェクトモデルなどの高度にカスタマイズ可能な仮想環境が含まれています。さらに、要素のメタ情報のサポートと、仮想サービスロボットとセンサーの統合が含まれています。
-
-実験：
-著者たちは、Robot@VirtualHomeを使用して合成データセットを収集する方法を示し、セマンティックマッピングと外観ベースのローカリゼーションという2つのサービスロボティクス関連の問題に対処する方法を例示しています。
-
-感想：
-このシステムは、ロボットが自由に操作でき、その内容と条件が完全に知られており、制御されている環境で、リアルなシミュレーションを提供することで、ロボティクス研究に新しい道を開くものです。
-
-参考：
-論文では、関連する多くの先行研究やデータセットが引用され、その中でRobot@VirtualHomeのユニークな貢献と位置づけが強調されています。
-
-どんなもの？
-Robot@VirtualHomeは、リアルな室内ロボットシミュレーションのための包括的なツールと環境のエコシステムです。
-
-先行研究と比べてどこがすごい？
-実世界の環境を模倣したリアルな仮想環境を提供する点で、この研究は他のシミュレーションツールや合成データセットと一線を画しています。
-
-技術や手法のキモはどこ？
-リアルな仮想環境の提供と、それらの環境でのロボットの動作をシミュレートするための詳細なツールと機能の組み合わせです。
-
-どうやって有効だと検証した？
-実世界のタスクを模倣する詳細なシミュレーションを通じて、システムの有効性と実用性が示されています。
-
-論文の主張やビジョンそのものに問題はないか？
-論文は、提案されたエコシステムがロボティクス研究においてどのように有用であるかを強調しており、特定の問題点や限界についての議論はそれほど詳しくありません。しかし、実世界の応用における検証や、さらなる改善の余地がある可能性は指摘されています。
+## title: "論文タイトル"
+date: YYYY-MM-DD
+categories:
+### 1. どんなもの？
+### 2. 先行研究と比べてどこがすごいの？
+### 3. 技術や手法の"キモ"はどこにある？
+### 4. どうやって有効だと検証した？
+### 5. 議論はあるか？
+### 6. 次に読むべき論文はあるか？
+### 論文情報・リンク
+- [D. Fernandez-Chaves, J.-R. Ruiz-Sarmiento, A. Jaenal, N. Petkov, and J. Gonzalez-Jimenez, “Robot@VirtualHome, an ecosystem of virtual environments and tools for realistic indoor robotic simulation,” Expert Systems with Applications, vol. 208, p. 117970, 2022. doi:10.1016/j.eswa.2022.117970 ]([論文リンク](https://pdf.sciencedirectassets.com/271506/1-s2.0-S0957417422X00171/1-s2.0-S0957417422012015/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDpyZgglwwSn11e6np%2FX%2FMk%2FeaFu758QjCNWD%2FX%2B9NLTAiAEOghIlIEh3UmMz5Rr%2BmA1BwnGfkjXit%2FT7Ic3pq1JLiq7BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMfP9DFHGzacmCsvzpKo8Fv%2F4yyZkSbXIeHDbXRbhSK1FTHdlZviUD%2F1dBrUxqxKzb%2F3C%2FmwfmltuU51nlgIbOxFkg7Wqvgv%2BCWXILyM09QrJlA%2F6hjA8%2FjFmkjo52aia1ffAD7eIvQd6lJZKWbma1g9vAgS5rCKC53r7PQplDPkmHvhEYydYGkhSdP1ZB59qQjhromTw31g9nmt4UQFJgSS2cPVGGTK61p%2FryrZy8jBQb7ai7Ybq6Cm%2B7N3E2sGXLoWCqElI2gILihLP91UML7n6DsVZWqL%2BFXkdctz78hL0HmICKazTxxLb6lFKgCZFJfchDFSxZps%2FDOA%2BEWxC%2FP58mHYSW5uuft1jK77iJn947jg%2FGDFDH1ulPCazZC26lRXmv98p%2B3yq0RfHNPdfCKDq2fLpi1%2FCDmIP7vdsrWofp%2B0PhlGmLoXxDlcZQOObmggCLID5sd4giLBxk2EmaIGZO%2B26wN1mv9Dd7pmER1%2B5SwwW2c9w5FwcI1304BqaOqyaJ4MaWBYglEQR6ft%2FbpYDjZSVtKTlWoVG86Kpysrs79%2FBkyOWh0lujX4tO9%2Fm5fHes3vGb8tJdWYvi83DhhcvlZpynF1SCqoKss6ReblF71TBUgY9hDLCGHY6t8Aq4A4wHaZYa6YQOP8griqE4mYkH7DKm7WOWBc35xRYf6IzDXolkHnOIt8KgFyvFwQmf%2BtZ2Hf3X3v9lOFd3jp4Ol%2FThVHev6Tal9nkJ%2BeXyUIEVHCD%2Fgy2q%2BM6MRH7uxVdiKl2jhuWCuHnqeh%2FIVKzZ%2BD0PMrWIhsL%2BrZKWA0i1m%2BJ1aIzFNY9Y5GJc7KmKYke4X1FxY0NsiDYuNKvN7P4P%2F6IpskBouyG42Mam%2FM3vhV3XgmjdNS5N64nG3QcQlDDawYKqBjqyAUMqLEWsRn%2BhlJDSPpnpYtWNphwA1xTQ5ofq6v1wldPdpZLj6d2o3UgQr6wY82kxOk1rXChXoePTPavYLZZly1Li%2BxG9OUlCnpzLMnKtsk86GOddcojqdG%2BzQqYpIcPN%2BxZkcNNmp2%2FyuGE%2B6hEmy0JzE2tdBCa4qt3aYd4MLBBtA8GmxPBtIrOWUUsnmIpUIT5sEsLmxXmmkBD5b%2FcqDIAvXg7CwBs33dArpvIYhw9VRP8%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231031T073922Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYYUXVWVUN%2F20231031%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1557f01ca5d73618ad90904aebf353a0e49036d95427790838de1ed9e7f4cb0a&hash=9c66a02dba9cdf3fc14f907482226d0befd3eeff789bcd8ea59789ef9ff332ab&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0957417422012015&tid=spdf-3a3b5179-1068-4f0d-9d8e-2bc312e6615a&sid=f5ac36437a5d7040e8586446058ddd267179gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=10105f53000e52025458&rr=81ea3e672d0580e1&cc=jp)https://pdf.sciencedirectassets.com/271506/1-s2.0-S0957417422X00171/1-s2.0-S0957417422012015/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDpyZgglwwSn11e6np%2FX%2FMk%2FeaFu758QjCNWD%2FX%2B9NLTAiAEOghIlIEh3UmMz5Rr%2BmA1BwnGfkjXit%2FT7Ic3pq1JLiq7BQjo%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMfP9DFHGzacmCsvzpKo8Fv%2F4yyZkSbXIeHDbXRbhSK1FTHdlZviUD%2F1dBrUxqxKzb%2F3C%2FmwfmltuU51nlgIbOxFkg7Wqvgv%2BCWXILyM09QrJlA%2F6hjA8%2FjFmkjo52aia1ffAD7eIvQd6lJZKWbma1g9vAgS5rCKC53r7PQplDPkmHvhEYydYGkhSdP1ZB59qQjhromTw31g9nmt4UQFJgSS2cPVGGTK61p%2FryrZy8jBQb7ai7Ybq6Cm%2B7N3E2sGXLoWCqElI2gILihLP91UML7n6DsVZWqL%2BFXkdctz78hL0HmICKazTxxLb6lFKgCZFJfchDFSxZps%2FDOA%2BEWxC%2FP58mHYSW5uuft1jK77iJn947jg%2FGDFDH1ulPCazZC26lRXmv98p%2B3yq0RfHNPdfCKDq2fLpi1%2FCDmIP7vdsrWofp%2B0PhlGmLoXxDlcZQOObmggCLID5sd4giLBxk2EmaIGZO%2B26wN1mv9Dd7pmER1%2B5SwwW2c9w5FwcI1304BqaOqyaJ4MaWBYglEQR6ft%2FbpYDjZSVtKTlWoVG86Kpysrs79%2FBkyOWh0lujX4tO9%2Fm5fHes3vGb8tJdWYvi83DhhcvlZpynF1SCqoKss6ReblF71TBUgY9hDLCGHY6t8Aq4A4wHaZYa6YQOP8griqE4mYkH7DKm7WOWBc35xRYf6IzDXolkHnOIt8KgFyvFwQmf%2BtZ2Hf3X3v9lOFd3jp4Ol%2FThVHev6Tal9nkJ%2BeXyUIEVHCD%2Fgy2q%2BM6MRH7uxVdiKl2jhuWCuHnqeh%2FIVKzZ%2BD0PMrWIhsL%2BrZKWA0i1m%2BJ1aIzFNY9Y5GJc7KmKYke4X1FxY0NsiDYuNKvN7P4P%2F6IpskBouyG42Mam%2FM3vhV3XgmjdNS5N64nG3QcQlDDawYKqBjqyAUMqLEWsRn%2BhlJDSPpnpYtWNphwA1xTQ5ofq6v1wldPdpZLj6d2o3UgQr6wY82kxOk1rXChXoePTPavYLZZly1Li%2BxG9OUlCnpzLMnKtsk86GOddcojqdG%2BzQqYpIcPN%2BxZkcNNmp2%2FyuGE%2B6hEmy0JzE2tdBCa4qt3aYd4MLBBtA8GmxPBtIrOWUUsnmIpUIT5sEsLmxXmmkBD5b%2FcqDIAvXg7CwBs33dArpvIYhw9VRP8%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231031T073922Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYYUXVWVUN%2F20231031%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1557f01ca5d73618ad90904aebf353a0e49036d95427790838de1ed9e7f4cb0a&hash=9c66a02dba9cdf3fc14f907482226d0befd3eeff789bcd8ea59789ef9ff332ab&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0957417422012015&tid=spdf-3a3b5179-1068-4f0d-9d8e-2bc312e6615a&sid=f5ac36437a5d7040e8586446058ddd267179gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=10105f53000e52025458&rr=81ea3e672d0580e1&cc=jp)
