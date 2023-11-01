@@ -25,4 +25,5 @@ categories:
 
 ```
 
-
+## 現状のスライド
+https://docs.google.com/presentation/d/1amUP3SOL16EJGoAp8HHbOiPWJZnpdQpO8jQgiEYzmOs/edit?usp=sharing
