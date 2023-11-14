@@ -1,23 +1,5 @@
-Z. Wang, S. Wu, W. Xie, M. Chen and V. Adrian Prisacariu, "NeRF–: Neural radiance fields without known camera parameters", arXiv:2102.07064, 2021.doi:https://doi.org/10.48550/arXiv.2102.07064
 
-論文リンク
-NeRF--: Neural Radiance Fields Without Known Camera Parameters
+B. Mildenhall, P. P. Srinivasan, M. Tancik, J. T. Barron, R. Ramamoor-thi and R. Ng, "Nerf: Representing scenes as neural radiance fields for view synthesis", CoRR, vol. abs/2003. 08934, 2020.
 
-著者/所属機関
-詳細な著者情報や所属機関については、提供されたPDFから直接的には得られませんでした。通常、この情報は論文の最初のページまたは末尾に記載されています。
-
-投稿年
-投稿年についても、提供された情報からは特定できませんでした。この情報は通常、論文のヘッダー、フッター、または文献情報セクションに記載されています。
-
-概要：
-NeRF--は、既知のカメラパラメータがなくても、2D画像のセットから新しい視点を合成する問題を簡素化します。これは、Neural Radiance Field (NeRF)のトレーニングプロセスを、カメラパラメータ（内部および6DoFポーズを含む）の既知または事前計算された要件を排除することによって、前方向のシーンに対して単純化します。この目的のために、NeRF--は、フォトメトリック再構成を通じてNeRFトレーニングとともにカメラパラメータを共同で最適化できることを示すという貢献をします。
-
-研究背景
-従来の方法では、カメラパラメータがトレーニング時に必要であり、これは実際のシナリオではほとんどアクセスできないものです。たとえば、モバイルフォンで撮影された画像などがこれに該当します。これらの方法は通常、従来の技術を使用してカメラパラメータを事前に計算しますが、これには追加の複雑さが伴い、潜在的に誤った結果をもたらしたり、完全に失敗する可能性があります。
-
-提案手法
-NeRF--は、カメラのポーズと内部パラメータを学習可能なパラメータとして扱い、3Dシーン表現とともにそれらを共同で最適化するフレームワークを導入します。前方向のセットアップでキャプチャされた疎な画像セットのみが与えられた場合、このシステムは、各画像のカメラパラメータを推定し、フォトメトリック再構成損失を通じてボリュームベースのシーン表現を学習するためにトレーニングできます。
-
-## いい感じの要約
-
-https://zenn.dev/takoroy/scraps/6eac388f6a44e1
+NeRF
+https://qiita.com/RyeWiskey/items/5d39625b25fb7734054a
